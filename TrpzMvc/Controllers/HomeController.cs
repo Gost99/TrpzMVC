@@ -15,15 +15,11 @@ namespace TrpzMvc.Controllers
 
         public ActionResult Info()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contacts()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
