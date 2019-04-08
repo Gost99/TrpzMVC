@@ -10,16 +10,19 @@ namespace TrpzMvc.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.PageIndex = 0;
             return View();
         }
 
         public ActionResult Info()
         {
+            ViewBag.PageIndex = 1;
             return View();
         }
 
         public ActionResult Contacts()
         {
+            ViewBag.PageIndex = 2;
             return View();
         }
     }
