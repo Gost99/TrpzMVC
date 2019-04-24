@@ -24,6 +24,10 @@ namespace TrpzMvc
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/css/theme.css"));
 
+            bundles.Add(new StyleBundle("~/Content/AdminCss").Include(
+                "~/Content/css/AdminPageTheme.css"));
+
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }

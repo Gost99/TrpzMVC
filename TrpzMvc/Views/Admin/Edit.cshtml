@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Edit page";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@model TrpzMvc.Models.Page
+<h2>Page № @Model.Id</h2>
+@using (Html.BeginForm("Edit", "Admin", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(p=>p.Title,"Title")
+            <br />
+            @Html.EditorFor(p=>p.Title)
+        </p>
+        <p>
+            @Html.LabelFor(p=>p.Text,"Text")
+            <br />
+            <textarea id="Text" name="Text" cols="100" rows="20">@Model.Text</textarea>
+        </p>
+        <p>
+            @Html.LabelFor(p => p.BackgroundImage.Path, "Image Path")
+            <br />
+            <select id="BackgroundImage_Path" name="BackgroundImage.Path">
+                @foreach (var img in ViewBag.Images)
+                {
+                    <option>@img.Path</option>
+                }
+            </select>
+        </p>
+        <p><input type="submit" value="Apply" /></p>
+    </fieldset>
+}

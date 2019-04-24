@@ -9,29 +9,29 @@
     @Styles.Render("~/Content/css")
 </head>
 <body>
-    @using TrpzMvc.Helpers
-    @Html.ChangeBackground((int)ViewBag.PageIndex)
-    <header class="header">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="/">
-                    <p class="logo-text"><img class="logo" src="~/Content/img/logo.png">Globe</p>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div style="flex: 1 0 auto;
+    background: url('@ViewBag.ImagePath') no-repeat center center / cover">
+        <header class="header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="/">
+                        <p class="logo-text"><img class="logo" src="~/Content/img/logo.png">Globe</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" @Html.ActionLink("Contacts", "Contacts", "Home")></a></li>
-                        <li class="nav-item"><a class="nav-link" @Html.ActionLink("Info", "Info", "Home")></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    @RenderBody()
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" @Html.ActionLink("Contacts", "Contacts", "Home")</a></li>
+                            <li class="nav-item"><a class="nav-link" @Html.ActionLink("Info", "Info", "Home")</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        @RenderBody()
     </div>
     <footer class="footer">
         <div class="container-fluid">
@@ -39,8 +39,9 @@
                 <div class="col-auto">
                     <p class="footer-text">98-765-43-21</p>
                 </div>
-                <div class="col-auto">
-                    <img class="logo-footer" src="~/Content/img/logo-footer.png">
+                <div class="col-auto admin-footer">
+                    <!--<img class="logo-footer" src="~/Content/img/logo-footer.png">-->
+                    <a href='/Admin/Pages'><img class="logo-footer" src="~/Content/img/logo-footer.png" /></a>
                 </div>
                 <div class="col-auto">
                     <p class="footer-text">Cilpo 25a street</p>
@@ -53,19 +54,3 @@
 </body>
 </html>
 
-
-
-
-@helper ChangeBackgroundClass(int index)
-{
-    switch (index)
-    {
-        case 0:<div class="content"></div>
-            break;
-        case 1: <div class="content contact_body"></div>
-            break;
-        case 2: <div class="content info_body"></div>
-            break;
-
-    }
-}

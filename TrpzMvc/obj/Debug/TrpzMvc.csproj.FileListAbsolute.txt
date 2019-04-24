@@ -103,3 +103,6 @@ D:\STUDY HARD\4 Семестр\KAYTON\lab3\TrpzMvc\obj\Debug\TrpzMvc.csproj.Core
 D:\STUDY HARD\4 Семестр\KAYTON\lab3\TrpzMvc\obj\Debug\TrpzMvc.csproj.CopyComplete
 D:\STUDY HARD\4 Семестр\KAYTON\lab3\TrpzMvc\obj\Debug\TrpzMvc.dll
 D:\STUDY HARD\4 Семестр\KAYTON\lab3\TrpzMvc\obj\Debug\TrpzMvc.pdb
+D:\STUDY HARD\4 Семестр\KAYTON\lab3\TrpzMvc\obj\Debug\TrpzMvc.Migrations.InitialCreate.resources
+D:\STUDY HARD\4 Семестр\KAYTON\lab3\TrpzMvc\obj\Debug\TrpzMvc.csproj.GenerateResource.cache
+D:\STUDY HARD\4 Семестр\KAYTON\lab3\TrpzMvc\obj\Debug\TrpzMvc.Migrations.MigrateDB.resources

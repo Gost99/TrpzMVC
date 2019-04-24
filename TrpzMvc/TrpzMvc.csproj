@@ -170,19 +170,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\BackgroundChangeHelper.cs" />
+    <Compile Include="Migrations\201904221230311_InitialCreate.cs" />
+    <Compile Include="Migrations\201904221230311_InitialCreate.Designer.cs">
+      <DependentUpon>201904221230311_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904221449148_MigrateDB.cs" />
+    <Compile Include="Migrations\201904221449148_MigrateDB.Designer.cs">
+      <DependentUpon>201904221449148_MigrateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PageModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\AdminPageTheme.css" />
     <Content Include="Content\img\bg.jpg" />
     <Content Include="Content\img\bg2.jpg" />
     <Content Include="Content\img\bg3.jpg" />
@@ -249,9 +260,20 @@
     <Content Include="Content\fonts\Montserrat-Black.ttf" />
     <Content Include="Content\fonts\Montserrat-Regular.ttf" />
     <None Include="packages.config" />
+    <Content Include="Views\Admin\Pages.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904221230311_InitialCreate.resx">
+      <DependentUpon>201904221230311_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904221449148_MigrateDB.resx">
+      <DependentUpon>201904221449148_MigrateDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
